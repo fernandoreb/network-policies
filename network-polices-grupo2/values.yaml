@@ -1,0 +1,3 @@
+networkPolices:
+  - namespace: nsapp2
+    name: np2

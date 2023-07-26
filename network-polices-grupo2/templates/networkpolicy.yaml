@@ -1,0 +1,16 @@
+{{ if .Values.networkPolices }}
+{{ range $networkPolices := .Values.networkPolices }}
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: {{ $networkPolices.name }}
+  namespace: {{ $networkPolices.namespace }}
+spec:
+  podSelector:
+    matchLabels:
+  ingress:
+  - from:
+    - podSelector: {}
+{{ end }}
+{{ end }}

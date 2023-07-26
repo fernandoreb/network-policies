@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: network-polices-grupo1
+  namespace: openshift-gitops
+spec:
+  syncPolicy:
+    automated: {}
+  destination:
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: {{ .Values.spec.source.pathGrupo1 }}
+    repoURL: {{ .Values.spec.source.repoURLGrupo1 }}
+    targetRevision: {{ .Values.spec.source.targetRevisionGrupo1 }}
+

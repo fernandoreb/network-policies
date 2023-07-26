@@ -1,0 +1,12 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    
+    repoURLGrupo1: https://github.com/fernandoreb/network-polices
+    targetRevisionGrupo1: HEAD
+    pathGrupo1: network-polices-grupo1
+    
+    repoURLGrupo2: https://github.com/fernandoreb/network-polices
+    targetRevisionGrupo2: HEAD    
+    pathGrupo2: network-polices-grupo2
